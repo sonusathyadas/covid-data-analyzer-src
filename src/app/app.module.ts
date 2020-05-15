@@ -12,6 +12,7 @@ import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { AboutComponent } from './components/about/about.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { SearchComponent } from './components/search/search.component';
+import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SearchComponent } from './components/search/search.component';
     BarChartComponent,
     AboutComponent,
     FeedbackComponent,
-    SearchComponent
+    SearchComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

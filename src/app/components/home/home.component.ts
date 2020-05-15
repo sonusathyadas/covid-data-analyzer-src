@@ -24,8 +24,7 @@ export class HomeComponent implements OnInit {
         this.covidData=this.covidSvc.getCovidData();        
     }
 
-    doSearch(data){
-        //console.log(data.country, data.sdate);
+    doSearch(data){        
         this.covidData=this.covidSvc.search(data.country,data.sdate);
     }
 

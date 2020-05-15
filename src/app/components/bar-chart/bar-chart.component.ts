@@ -10,8 +10,8 @@ import { DatePipe } from '@angular/common';
 })
 export class BarChartComponent implements OnInit {
 
-    private country: string;
-    private province:string;
+    country: string;
+    province:string;
 
     chartLabels: string[];
     chartData: any[] = [];

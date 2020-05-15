@@ -15,6 +15,8 @@
                     <th>Confirmed</th>
                     <th>Recovered</th>
                     <th>Deaths</th>
+                    <th>Recovery Rate</th>
+                    <th>Death Rate</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,9 +26,18 @@
                         <a [routerLink]="['/chart', item.countryOrRegion ]" [queryParams]="{province: item.provinceOrState}"> {{item.countryOrRegion }}</a>
                     </td>
                     <td>{{item.provinceOrState}}</td>
-                    <td>{{item.confirmed}}</td>
+                    <td>
+                        {{item.confirmed}}
+                        
+                    </td>
                     <td>{{item.recovered}}</td>
                     <td>{{item.deaths}}</td>
+                    <td>
+                        <span class="text-success" *ngIf="item.confirmed && item.confirmed>0">{{ (item.recovered/item.confirmed) | percent:'.0-2'}}</span>                        
+                    </td>
+                    <td>
+                        <span class="text-danger" *ngIf="item.confirmed && item.confirmed>0"> {{ (item.deaths/item.confirmed) | percent:'.0-2' }}</span>
+                    </td>
                 </tr>
             </tbody>
         </table>
